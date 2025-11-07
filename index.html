@@ -1,236 +1,316 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Delish Dinner | Home</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generative AI</title>
 
-<style>
+  <style>
 
-  
-  @keyframes ani1
-  {
-    from{opacity:0 }
-    to{opacity:1}
-  }
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
 
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
+    body 
+    {
+       background:#f3f4f6; 
+       color:#222; 
+      
+      }
 
-body {
- // background-color: #d6eaf8;
-  color: black;
-  line-height: 1.6;
-  transition: 2s;
-  animation:ani1 2s;
+    
+    header {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
 
-}
+    .home {
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
 
-header {
-  background-image:url(images2/r1.jpg);
-  height:600px;
-  width: 100%;
-  padding: 25px;
-  color: black;
-  text-align:left;
-  font-size:24px;
- 
-}
+    h1.logo {
+      font-size:23px;
+      font-weight:700;
+      color:#111;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: right;
-  gap: 15px;
-  padding: 10px;
-  font-size: 24px;
+    h1.logo span 
+    { 
+      color:#79280a; 
+    }
+
+   
+    nav a 
+    {
+      color:black;
+      margin-left:20px;
+      font-size:16px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px;
+     
+      
+    }
+   
+
+    nav a::after{
+      content:"";
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:0;
+      height:2px;
+      background:#79280a;
+      transition:0.3s;
+    }
+
+    nav a:hover::after
+    {
+      width:100%;
+    }
+
+    
+    
+    
+    .back {
+      background:url('images/a3.png') center/cover;
+      height:88vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .back-overlay 
+    {
+      background:rgba(0,0,0,0.25);
+      position:absolute;
+      inset:0;
+    }
+
+    .back-content 
+    {
+      position:relative;
+      text-align:center;
+      max-width:800px;
+      color:white;
+    }
+
+    .back-content h2 
+    {
+      font-size:3.5rem;
+      font-weight:700;
+      line-height:1.2;
+      text-shadow:0 6px 18px rgba(0,0,0,0.6);
+    }
+
+    .back-content p 
+    {
+      font-size:1.2rem;
+      margin-top:15px;
+      opacity:0.9;
+    }
+
+    .button
+    {
+      margin-top:25px;
+      padding:14px 34px;
+      font-size:1rem;
+      border-radius:40px;
+      background:white;
+      color:black;
+      text-decoration:none;
+      display:inline-block;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .button:hover 
+    {
+      color:white;
+      background:#79280a;
+      transform:translateY(-3px);
+      box-shadow:0 8px 22px rgba(0,0,0,0.3);
+    }
+
+    
+    .f1 {
+      padding:70px 0;
+      background:#ffffff;
+    }
+
+    .f1 h2 {
+      text-align:center;
+      font-size:2.4rem;
+      margin-bottom:40px;
+      font-weight:700;
+    }
+
+    .f1-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:20px;
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .card {
+      background:#fff;
+      padding:25px;
+      border-radius:18px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.1);
+      transition:0.3s;
+      
+    }
+
+     .card img{
+      width:100%;
+      height:180px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
 
 
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  
- 
-}
-
-nav a:link
+     .card a:link
 {
 color:white;
 text-decoration:none;
-padding:10px;
 transition:0.50s;
 }
 
-nav a:visited
+.card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 12px 30px rgba(0,0,0,0.15);
+    }
+
+.card a:visited
 {
-color:white;
+ color: white;
 }
 
-nav a:hover 
-{
-  text-decoration: underline;
-  background-color: black;
-  border-radius: 15px;
-  
-}
+    .card h3 {
+      text-align: center;
+      margin-bottom:15px;
+      font-size:20px;
+      color:#79280a;
+    }
 
-.me {
-  height: 400px;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-   animation: pulse; 
-  animation-duration: 2s; 
-}
+    .card p 
+    { 
+      text-align: center;
+      padding: 0 15px 15px;
+      color:#000000; 
+    }
 
-.me h2 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
+    
 
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-
-
-
-
-footer {
-  background-color: #222;
-  color: #fff;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-  margin-bottom: 20px;
-}
-
-.footer-column h3 {
-  border-bottom: 2px solid #555;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-
-.footer-column ul {
-  list-style: none;
-  padding: 10px;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-  color: #bbb;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
-  color: white;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 400px;
-  margin-bottom: 10px;
-}
-
-.social-icons img {
-  width: 24px;
-  height: 24px;
-
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #444;
-  font-size: 14px;
-  color: #aaa;
-
-}
-
-
-</style>
-
+    
+  </style>
+</head>
 
 <body>
   <header>
-    <h1 class="animate__animated animate__bounce">Delish Dinner</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html#menu">Menu</a></li>
-        <li><a href="about.html#about">About</a></li>
-        <li><a href="contact.html#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="home">
+      <h1 class="logo">🤖Gen<span>AI</span> World</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="#">Evolution</a>
+        <a href="application.html">Applications</a>
+        <a href="future.html">Future</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="me">
-    <h2>Welcome to Delish Dinner</h2>
-    <p>Home of delicious and fresh meals</p>
-  </div>
-
-  <section>
-    <h2>Why Choose Us?</h2>
-    <p>We serve high-quality, freshly prepared meals with ingredients sourced locally.</p>
+  <section class="back">
+    <div class="back-overlay"></div>
+    <div class="back-content">
+      <h2>Discover the Future of Artificial Intelligence</h2>
+      <p>Learn about AI, its evolution, and modern Generative AI models capable of creating images and more.</p>
+      <a class="button" href="genai.html">What is GenAI?</a>
+      <a class="button" href="#f1">Topic Covered</a>
+    </div>
   </section>
 
-  <footer>
-  <div class="footer-container">
-    
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/19XAmh2ksP/"><img src="images2/r9.png" alt="Facebook" /></a>
-        <a href="https://www.behance.net/nirajchaudhary18"><img src="images2/r7.png" alt="Behance" /></a>
-        <a href="https://www.instagram.com/artsy.neeru?igsh=MTQ0NzgweXBtemtpdg==&utm_source=ig_contact_invite"><img src="images2/r8.png" alt="Instagram" /></a>
+  <section class="f1">
+    <h2>Why Learn Generative AI?</h2>
+    <div class="f1-grid">
+      <div class="card">
+        
+        <h3>Clear Concepts</h3>
+        <p>Understand Artificial Intelligence from basics to advanced topics.</p>
+      </div>
+
+      <div class="card">
+        <h3>Modern Applications</h3>
+        <p>See how GenAI is used in coding, design, healthcare, and automation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Interactive Learning</h3>
+        <p>Easy-to-understand structure makes learning simple and engaging.</p>
+      </div>
+
+      <div class="card">
+        <h3>Industry Ready</h3>
+        <p>Learn skills that are highly in demand across the world.</p>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Your Company. All rights reserved.</p>
-  </div>
-</footer>
+  </section>
 
+  <section id="f1" class="f1">
+  <h2>Topics Covered</h2>
+  <div class="f1-grid">
+    <div class="card">
+      <a href="history.html" alt="history">
+      <img src ="images/a7.png" >
+      <h3>📜 History</h3>
+      <p>Birth of AI — from rule-based systems to neural networks.</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="#" alt="evolution">
+      <img src ="images/a4.png" >
+      <h3>✨ Evolution</h3>
+      <p>How AI creates images, text, music & more.</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="application.html" alt="Applications">
+      <img src ="images/a5.png" >
+      <h3>🚀 Applications</h3>
+      <p>AI revolution in education, healthcare, business & robotics.</p>
+     </a>
+   </div>
+
+    <div class="card">
+      <a href="future.html" alt="history">
+      <img src ="images/a6.png" >
+      <h3>🔮 Future</h3>
+      <p>AI in 2047 — AGI, smart cities, autonomous world.</p>
+      </a>
+    </div>
+  </div>
+</section>
+ 
 </body>
 </html>
