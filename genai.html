@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is Generative AI?</title>
+
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+
+     @keyframes ani1
+  {
+    from{opacity:0 }
+    to{opacity:1}
+  }
+
+    :root{
+      --ease: ease-in-out;
+    }
+
+    * {
+       margin:0; 
+       padding:0; 
+       box-sizing:border-box;
+       font-family:'Poppins', sans-serif; 
+       scroll-behavior: smooth;
+       animation:pulse;
+       animation-duration: 1.5s;
+      }
+
+    body { 
+      background:#f3f4f6; 
+      color:#222; 
+       animation:ani1 1s;
+    }
+
+    
+    header {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .container {
+      width:90%; 
+      max-width:1200px;
+       margin:auto;
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center;
+    }
+
+    h1.logo 
+    { 
+      
+      font-size:23px; 
+      font-weight:700; 
+      color:#111; 
+    }
+
+    h1.logo span 
+    { 
+      color:#79280a; 
+    }
+
+    nav a {
+      color:black;
+      margin-left:20px;
+      font-size:16px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px;
+    }
+ nav a::after{
+      content:"";
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:0;
+      height:2px;
+      background:#79280a;
+      transition:0.3s;
+    }
+
+    nav a:hover::after
+    {
+      width:100%;
+    }
+
+    
+    .hero {
+      background:url('images/gen1.png') center/cover;
+      height:65vh;
+      display:flex; 
+      align-items:center; 
+      justify-content:center;
+      position:relative; 
+      text-align:center;
+    }
+
+    .hero::before {
+      content:""; 
+      position:absolute; 
+      inset:0;
+      background:rgba(0,0,0,0.55);
+    }
+    
+    
+    .content-section {
+      padding:60px 0; 
+      width:90%; 
+      max-width:1100px; 
+      margin:auto;
+    }
+
+    .content-section h2 
+    { 
+      font-size:2.4rem; 
+      font-weight:700; 
+      text-align:center; 
+      margin-bottom:40px; 
+    }
+
+    .info-box {
+      background:white;
+       padding:25px; 
+       border-radius:14px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.1); 
+      margin-bottom:25px;
+    }
+
+    .info-box:hover
+    {
+      
+      transform:translateY(-6px) scale(1.02);
+    }
+    
+
+    .info-box h3 { 
+      margin-bottom:15px; 
+      font-size:20px; 
+      color:#79280a;
+    }
+
+    .info-box h5 
+    { 
+      margin-top: 5px;
+      margin-bottom:10px; 
+      font-size:13px; 
+      color:#111; 
+    }
+
+    .info-box p { 
+       color:#555;
+       padding: 0 1px 8px;
+       
+       }
+
+    
+
+    .pill 
+    {
+      background:#79280a; 
+      color:white; 
+      padding:10px 18px; 
+      border-radius:30px;
+      font-size:14px; 
+      font-weight:600; 
+      display:inline-block; 
+      margin:5px;
+    }
+    
+    
+     .cards
+    {
+       display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        gap:20px;
+        margin-top:18px;
+    }
+
+   .card{
+      background:white;
+      border-radius:14px;
+      padding:20px;
+      text-align:center;
+      margin-bottom:20px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.1);
+      transition:transform .3s var(--ease);
+    }
+    .card:hover
+    {
+      transform:translateY(-6px) scale(1.02);
+    }
+    
+    .card img{
+        width:100%;
+        height:140px;
+        border-radius:10px;
+        object-fit:cover;
+        margin-bottom:10px;
+        transition:transform 3s ease;
+    }
+
+    .card:hover img
+    {
+      transform:scale(1.05);
+    }
+
+    .card h3 {
+      text-align: center;
+      margin-bottom:12px;
+      font-size:20px;
+      color:#79280a;
+    }
+    
+    .card p
+    {
+      text-align: center;
+      padding: 0 15px 15px;
+      color:#555; 
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Gen<span>AI</span></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="evolution.html">Evolution</a>
+        <a href="applications.html">Applications</a>
+        <a href="future.html">Future</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    
+  </section>
+
+  <section class="content-section">
+    <h2>Understanding Generative AI</h2>
+    
+
+    <div class="info-box">
+      <h3>📌 Definition</h3>
+      <p>Generative AI means AI that can “generate” new things — like writing essays, drawing pictures, composing songs, or designing products — using patterns it has learned from large amounts of data.</p>
+
+<h5>Example Tools:</h5>
+
+<p> ChatGPT – generates human-like text.</p>
+<hr style="width:290px;margin:3px;">
+<p>Gemini/Midjourney – creates images from text prompts.</p>
+<hr style="width:410px;margin:3px;">
+<p>Suno/Udio – composes music.</p>
+<hr style="width:230px;margin:3px;">
+<p>GitHub Copilot – writes computer code.</p>
+<hr style="width:300px;margin:3px;">
+    </div>
+
+    <div class="info-box">
+      <h3>⚙ How It Works</h3>
+      <p>Generative AI works by using machine learning and neural networks to learn patterns, structures, and styles from large datasets.
+Once trained, it uses this knowledge to generate new and original content that looks or sounds like human-created data.
+<h5>For example:</h5> <p>ChatGPT learns from text data to write essays or answer questions.</p>
+<hr style="width:490px;margin:3px;">
+<p> While DALL·E learns from images to create new pictures from text prompts.</p>
+<hr style="width:550px;margin:3px;">
+<p><mark>In short, GenAI learns from data → understands patterns → generates creative outputs.</mark></p>
+<hr style="width:635px;margin:3px;">
+
+</div>
+
+    <div class="info-box">
+      <h3>🚀 Key Features</h3>
+      <h5>key features of Generative AI (GenAI):</h5>
+      <p>Content Creation – 
+  GenAI can create new and original content such as text, images, videos, music, or code.</p>
+  <hr style="width:75%;margin:3px;">
+
+  <p>Learning from Data – 
+It learns patterns, styles, and structures from large datasets to generate realistic outputs.</p>
+<hr style="width:77%;margin:3px;">
+        <p>Human-like Creativity – 
+It produces outputs that often resemble human creativity and expression.</p>
+<hr style="width:67%;margin:3px;">
+<p>Automation and Efficiency – 
+It automates creative and repetitive tasks, saving time and effort.</p>
+<hr style="width:65%;margin:3px;">
+
+<p>Continuous Improvement – 
+GenAI models get better over time through new training data and user feedback.</p>
+<hr style="width:75%;margin:3px;">
+    </div>
+
+    <br>
+    
+    <h2>Popular Types of Generative Models</h2>
+
+    
+      <div class="cards">
+        <div class="card" ><img src="images/gen2.png">
+        <h3>🧠 LLMs (Large Language Models)</h3>
+        <p>These models generate human-like text and answer questions using massive datasets.</p>
+      </div>
+      
+
+      <div class="card"><img src="images/gen3.png">
+        <h3>🎨 Diffusion Models</h3>
+        <p>Used to generate images by converting noise into meaningful visuals.</p>
+      </div>
+
+      <div class="card"><img src="images/gen5.png">
+        <h3>🔄 GANs (Generative Adversarial Networks)</h3>
+        <p>Two neural networks compete to create realistic synthetic data.</p>
+      </div>
+
+      <div class="card"><img src="images/gen4.png">
+        <h3>💡 VAEs (Variational Autoencoders)</h3>
+        <p>Useful for reconstructing and generating variations of input data.</p>
+      </div>
+    </div>
+    
+
+    <br><br>
+    <h2>Core Concepts</h2>
+
+    <center>
+      <span class="pill">Transformers</span>
+      <span class="pill">Neural Networks</span>
+      <span class="pill">Diffusion</span>
+      <span class="pill">Prompt Engineering</span>
+      <span class="pill">Fine-tuning</span>
+      <span class="pill">Embeddings</span>
+    </center>
+
+  </section>
+
+</body>
+</html>
