@@ -35,7 +35,7 @@
     body { 
       background:#f3f4f6; 
       color:#222; 
-       animation:ani1 1s;
+       //animation:ani1 1s;
     }
 
     
@@ -201,6 +201,19 @@
     {
       transform:translateY(-6px) scale(1.02);
     }
+
+    .card a:link
+{
+color:white;
+text-decoration:none;
+//padding:10px;
+transition:0.50s;
+}
+
+.card a:visited
+{
+ color: white;
+}
     
     .card img{
         width:100%;
@@ -280,7 +293,7 @@ Once trained, it uses this knowledge to generate new and original content that l
 <hr style="width:490px;margin:3px;">
 <p> While DALL·E learns from images to create new pictures from text prompts.</p>
 <hr style="width:550px;margin:3px;">
-<p><mark>In short, GenAI learns from data → understands patterns → generates creative outputs.</mark></p>
+<p>In short, <strong>GenAI learns from data → understands patterns → generates creative outputs.</strong></p>
 <hr style="width:635px;margin:3px;">
 
 </div>
@@ -313,25 +326,37 @@ GenAI models get better over time through new training data and user feedback.</
 
     
       <div class="cards">
-        <div class="card" ><img src="images/gen2.png">
+        <div class="card" >
+          <a href="https://en.wikipedia.org/wiki/Large_language_model">
+          <img src="images/gen2.png">
         <h3>🧠 LLMs (Large Language Models)</h3>
         <p>These models generate human-like text and answer questions using massive datasets.</p>
+        </a>
       </div>
       
 
-      <div class="card"><img src="images/gen3.png">
+      <div class="card">
+        <a href="https://en.wikipedia.org/wiki/Diffusion_model">
+        <img src="images/gen3.png">
         <h3>🎨 Diffusion Models</h3>
         <p>Used to generate images by converting noise into meaningful visuals.</p>
+        </a>
       </div>
 
-      <div class="card"><img src="images/gen5.png">
+      <div class="card">
+        <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">
+        <img src="images/gen5.png">
         <h3>🔄 GANs (Generative Adversarial Networks)</h3>
         <p>Two neural networks compete to create realistic synthetic data.</p>
+        </a>
       </div>
 
-      <div class="card"><img src="images/gen4.png">
+      <div class="card">
+        <a href="https://en.wikipedia.org/wiki/Variational_autoencoder">
+        <img src="images/gen4.png">
         <h3>💡 VAEs (Variational Autoencoders)</h3>
         <p>Useful for reconstructing and generating variations of input data.</p>
+        </a>
       </div>
     </div>
     
