@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+
+    @keyframes ani1 {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f3f4f6;
+      color: #222;
+      animation: ani1 1s;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .home {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1.logo {
+      font-size: 23px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    h1.logo span {
+      color: #79280a;
+    }
+
+    nav a {
+      color: black;
+      margin-left: 20px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #79280a;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background: url('images/hiss1.png') center/cover;
+      height: 71vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    
+    
+
+    
+    .timeline-section {
+      padding: 60px 0;
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .timeline-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+      border-left: 4px solid #79280a;
+    }
+
+    .event {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+      transition: transform 0.3s;
+    }
+
+    .event:hover {
+      transform: translateY(-6px) scale(1.02);
+    }
+
+    .event h3 {
+      font-size: 20px;
+      color: #79280a;
+      margin-bottom: 10px;
+    }
+
+    .event p {
+      color: #555;
+      line-height: 1.5;
+      padding: 0 1px 8px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="home">
+      <h1 class="logo">Gen<span>AI</span></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="genai.html">What is GenAI?</a>
+        <a href="evolution.html">Evolution</a>
+        <a href="application.html">Applications</a>
+        <a href="future.html">Future</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero"></section>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <section class="timeline-section">
+    <h2>History of Artificial Intelligence (AI)</h2>
+
+    <div class="event">
+
+    <p>The history of Artificial Intelligence (AI) is a fascinating story of how humans dreamed of giving machines the ability to “think and learn” — and turned that dream into reality. 
+    In the 1950s, <strong>Alan Turing</strong> asked the question, <em>“Can machines think?”</em> — marking the beginning of AI’s journey. 
+    In 1956, at the <strong>Dartmouth Conference</strong>, the term <em>“Artificial Intelligence”</em> was officially coined. 
+    Since then, AI has evolved from symbolic reasoning to machine learning, deep learning, and now, the age of Generative AI.
+    </p>
+
+    <p>
+    The early years of AI were marked by high optimism and groundbreaking experiments in logical reasoning and problem-solving. 
+    However, limited computing power and data availability led to the first “AI winter,” a period of slowed progress and reduced funding. 
+    Despite these challenges, research in the 1980s and 1990s revived the field through expert systems, robotics, and neural networks — laying the groundwork for modern AI technologies.
+  </p>
+
+  <p>
+    In the 21st century, AI has rapidly evolved due to the explosion of big data and advanced computing. 
+    Deep learning algorithms, massive datasets, and innovations like GPT, DALL·E, and AlphaGo have transformed AI into a creative and decision-making force. 
+    Today, AI not only understands and analyzes information but also generates text, art, music, and video — becoming the digital reflection of human intelligence and creativity.
+  </p>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+  <h2>AI Development Timeline</h2>
+
+  <div class="timeline">
+
+    <div class="event">
+      <h3>1940s – Early Concepts</h3>
+      <p>
+        During the 1940s, scientists began exploring whether machines could mimic human reasoning.
+        In 1943, Warren McCulloch and Walter Pitts created the first model of an artificial neuron,
+        laying the theoretical foundation for Artificial Intelligence.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>1950 – The Turing Test</h3>
+      <p>
+        British mathematician <strong>Alan Turing</strong> published “Computing Machinery and Intelligence” and asked,
+        “Can machines think?”. He introduced the <em>Turing Test</em> — if a machine could mimic human conversation,
+        it could be considered intelligent.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>1956 – Birth of Artificial Intelligence</h3>
+      <p>
+        The term <strong>Artificial Intelligence</strong> was first introduced at the <strong>Dartmouth Conference</strong>.
+        Pioneers like John McCarthy, Marvin Minsky, and Herbert Simon established AI as a formal academic field,
+        aiming to build machines that could learn and reason like humans.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>1960s–1970s – Early AI Programs</h3>
+      <p>
+        Researchers created symbolic reasoning and logic-based programs.
+        Famous examples include <strong>ELIZA</strong> (1966), a chatbot that simulated human conversation,
+        and the <strong>General Problem Solver</strong>, which tackled mathematical reasoning.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>1980s – The Era of Expert Systems</h3>
+      <p>
+        With improved computing power, AI entered the “Expert Systems” era.
+        These programs replicated human expert decision-making using “if–then” rules.
+        One famous system, <strong>MYCIN</strong>, helped diagnose bacterial infections.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>1997 – Deep Blue Defeats Kasparov</h3>
+      <p>
+        IBM’s <strong>Deep Blue</strong>, a chess-playing AI, defeated world champion Garry Kasparov.
+        This historic win demonstrated the computational and strategic power of AI systems.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>2000s – Machine Learning Evolution</h3>
+      <p>
+        With the rise of the internet, vast amounts of data became available.
+        AI systems learned to recognize patterns and make predictions through <strong>Machine Learning (ML)</strong>,
+        marking a major step toward modern AI.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>2012 – The Deep Learning Revolution</h3>
+      <p>
+        The breakthrough of <strong>Deep Neural Networks</strong> transformed AI research.
+        The <strong>AlexNet</strong> model won the ImageNet competition, showcasing exceptional image recognition capabilities
+        and launching the modern deep learning era.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>2016 – AlphaGo Beats Lee Sedol</h3>
+      <p>
+        Google DeepMind’s <strong>AlphaGo</strong> defeated world Go champion Lee Sedol.
+        The victory proved that AI could master intuition and complex strategies beyond human capabilities.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>2020s – The Rise of Generative AI</h3>
+      <p>
+        AI has now entered the creative age. Models like <strong>ChatGPT</strong>, <strong>DALL·E</strong>, and <strong>Midjourney</strong>
+        can generate text, art, music, and videos. This era, known as <em>Generative AI</em>,
+        shows machines collaborating with human imagination to create entirely new ideas.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+</body>
+</html>
