@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applications of Generative AI</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Poppins', sans-serif; 
+      scroll-behavior: smooth;
+      animation:pulse;
+      animation-duration: 1.5s;
+    }
+
+    body 
+    { 
+      background:#f3f4f6; 
+      color:#222; 
+    }
+
+  
+    header {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .home 
+    {
+      width:90%; 
+      max-width:1200px; 
+      margin:auto;
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center;
+    }
+
+    h1.logo 
+    { 
+      font-size:23px;
+      font-weight:700; 
+      color:#111; 
+    }
+
+    h1.logo span 
+    { 
+      color:#79280a; 
+    }
+
+    nav a 
+    {
+      color:black; 
+      margin-left:20px; 
+      font-size:16px; 
+      text-decoration:none; 
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px; 
+    }
+
+   nav a::after{
+      content:"";
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:0;
+      height:2px;
+      background:#79280a;
+      transition:0.3s;
+    }
+
+    nav a:hover::after
+    {
+      width:100%;
+    }
+
+    
+    .back 
+    {
+      background:url('images/ap0.png') center/cover;
+      height:71vh;
+      display:flex; 
+      align-items:center; 
+      justify-content:center;
+      position:relative; 
+      text-align:center;
+    }
+
+    .back::before {
+      content:""; 
+      position:absolute; 
+      inset:0;
+      background:rgba(0,0,0,0.55);
+    }
+
+    .back h2 {
+      font-size:3rem; 
+      font-weight:700; 
+      color:white;
+      position:relative; 
+      text-shadow:0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    
+    .section 
+    {
+      padding:60px 0; 
+      width:90%; 
+      max-width:1100px; 
+      margin:auto;
+    }
+
+    .section h2 
+    { 
+      font-size:2.4rem; 
+      font-weight:700; 
+      text-align:center; 
+      margin-bottom:40px; 
+    }
+
+    .grid 
+    {
+      display:grid; 
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); 
+      gap:35px;
+    }
+
+    .card {
+      background:white;
+      border-radius:20px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.1);
+      overflow:hidden;
+      transition:transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover 
+    {
+      transform:translateY(-10px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .card img 
+    {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      transition:0.3s ease;
+    }
+
+    .card:hover img 
+    {
+      transform:scale(1.05);
+    }
+
+    .card-content 
+    {
+      padding:22px;
+    }
+
+    .card h3 
+    { 
+      text-align: center;
+      font-size:1.2rem;
+      color:#79280a;
+      margin-bottom:10px;
+    }
+
+    .card p 
+    { 
+      text-align: center;
+      color:#555; 
+      line-height:1.6; 
+      font-size:0.95rem;
+
+    }
+
+     @media (max-width:600px) {
+      .back h2 { font-size:2rem; }
+      .section h2 { font-size:1.8rem; }
+    }
+
+   
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="home">
+      <h1 class="logo">Gen<span>AI</span></h1>
+      <nav>
+        <a href="index.html">Home</a>
+         <a href="genai.html">What is GenAI?</a>
+        <a href="history.html">History</a>
+        <a href="evolution.html">Evolution</a>
+        <a href="future.html">Future</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="back"></section>
+
+  
+  <br/>
+  <br/>
+
+  <section class="section">
+    <h2>Where is Generative AI Used?</h2>
+
+    <div class="grid">
+    <div class="card">
+         <img src="images/ap.png" alt="">
+         <div class="card-content">
+        <h3>🎨 Creative Industries</h3>
+        <p>Used for image generation, video creation, music composition, graphic design, and storytelling.</p>
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="images/ap2.png" alt="">
+         <div class="card-content">
+        <h3>💼 Business & Marketing</h3>
+        <p>Generates advertisements, product descriptions, branding ideas, and customer support automation.</p>
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="images/ap4.png" alt="">
+         <div class="card-content">
+        <h3>💻 Software Development</h3>
+        <p>AI assists in code generation, debugging, documentation creation, and workflow automation.</p>
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="images/ap8.png" alt="">
+         <div class="card-content">
+        <h3>🏥 Healthcare</h3>
+        <p>Creates medical reports, analyzes scans, synthesizes drug molecules, and supports diagnostics.</p>
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="images/ap9.png" alt="">
+         <div class="card-content">
+        <h3>📚 Education</h3>
+        <p>Helps in personalized learning, automatic notes generation, tutoring, and language learning.</p>
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="images/ap10.png" alt="">
+         <div class="card-content">
+        <h3>🎮 Gaming & Simulation</h3>
+        <p>Generates game assets, levels, characters, and realistic simulations for virtual environments.</p>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Ethical & Responsible AI Use</h2>
+
+    <div class="grid">
+      <div class="card">
+         <img src="images/ap11.png" alt="">
+         <div class="card-content">
+        <h3>✅ Bias Reduction</h3>
+        <p>Ensuring AI systems do not produce harmful or unfair content.</p>
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="images/ap13.png" alt="">
+         <div class="card-content">
+        <h3>✅ Privacy Protection</h3>
+        <p>Keeping user data safe and not exposing personal information.</p>
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="images/ap12.png" alt="">
+         <div class="card-content">
+        <h3>✅ Safe Deployment</h3>
+        <p>Using AI responsibly in critical applications such as medical or legal fields.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+</body>
+</html>
