@@ -7,6 +7,12 @@
 
   <style>
 
+    @keyframes ani1
+  {
+    from{opacity:0 }
+    to{opacity:1}
+  }
+
     * { 
       margin:0; 
       padding:0; 
@@ -20,7 +26,7 @@
     {
        background:#f3f4f6; 
        color:#222; 
-      
+       animation:ani1 2s;
       }
 
     
@@ -35,7 +41,7 @@
 
     .home {
       width:90%;
-      max-width:1200px;
+      max-width:1350px;
       margin:auto;
       display:flex;
       justify-content:space-between;
@@ -170,7 +176,7 @@
     }
 
     .card {
-      background:#fff;
+      background:white;
       padding:25px;
       border-radius:18px;
       box-shadow:0 6px 20px rgba(0,0,0,0.1);
@@ -217,7 +223,106 @@
       color:#555; 
     }
 
-    
+   
+
+.footer {
+  background: #222;
+  color: #ddd;
+  padding: 60px 0 20px;
+  margin-top: 40px;
+}
+
+.footer-back 
+{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.footer-about 
+{
+  width: 300px;
+}
+
+.footer-logo {
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-logo span 
+{
+ 
+  color: #79280a;
+}
+
+.footer-about p 
+{
+  line-height: 1.5;
+  color: #ccc;
+}
+
+
+.footer-links h3, .footer-social h3 
+{
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+  color: #f3f1f1;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a 
+{
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.footer-links ul li a:hover 
+{
+  color: white;
+  padding-left: 5px;
+}
+
+
+.footer-social .icons a 
+{
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  transition: 0.5s;
+  
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  
+}
+
+.footer-social .icons a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
 
     
   </style>
@@ -247,7 +352,8 @@
     </div>
   </section>
   <br/>
-
+  
+  
   <section class="f1">
     <h2>Why Learn Generative AI?</h2>
     <div class="f1-grid">
@@ -309,7 +415,49 @@
       </a>
     </div>
   </div>
+  
 </section>
+
+
+<footer class="footer">
+  <div class="footer-back">
+
+    
+    <div class="footer-about">
+      <h2 class="footer-logo">🤖Gen<span>AI</span> World</h2>
+      
+      <p>Learn the past, present & future of Artificial Intelligence(AI) & GenAI with simple explanations.</p>
+    </div>
+    
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="genai.html">What is GenAI?</a></li>
+        <li><a href="history.html"> History of AI</a></li>
+        <li><a href="evolution.html"> Evolution</a></li>
+        <li><a href="application.html"> Applications</a></li>
+        <li><a href="future.html"> Future of AI</a></li>
+         <li><a href="contact.html"> Contact </a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="icons">
+        <a href="https://www.facebook.com/share/19XAmh2ksP/"><span><img src="images/r9.png" alt="Facebook" /></span> Facebook</a>
+        <a href="https://www.instagram.com/artsy.neeru?igsh=MTQ0NzgweXBtemtpdg==&utm_source=ig_contact_invite"><span><img src="images/r8.png" alt="Instagram" /></span> Instagram</a>
+        <a href="https://www.behance.net/navinkumar09"><span><img src="images/r7.png" alt="Behance" /></span> Behance</a>
+        
+      </div>
+    </div>
+    
+
+  </div>
+  
+   </footer>
+
+
  
 </body>
 </html>
