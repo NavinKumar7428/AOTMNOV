@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Future of Generative AI</title>
+
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Poppins', sans-serif; 
+      scroll-behavior: smooth;
+    }
+
+    body 
+    { 
+      background:#f3f4f6; 
+      color:#222; 
+       animation:slideInDown;
+       animation-duration: 1.5s;
+    }
+
+  
+    header 
+    {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .home 
+    {
+      width:90%; 
+      max-width:1350px; 
+      margin:auto;
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center;
+    }
+
+    h1.logo 
+    { 
+      font-size:23px; 
+      font-weight:700; 
+      color:#111; 
+    }
+
+
+    h1.logo span 
+    { 
+      color:#79280a; 
+    }
+
+    nav a {
+      color:black;
+      margin-left:20px;
+      font-size:16px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    nav a::after{
+      content:"";
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:0;
+      height:2px;
+      background:#79280a;
+      transition:0.3s;
+    }
+
+    nav a:hover::after
+    {
+      width:100%;
+    }
+
+    
+    .back {
+      background:url('images/fa.png') center/cover;
+      height:71vh;
+      display:flex; 
+      align-items:center; 
+      justify-content:center;
+      position:relative; 
+      text-align:center;
+    }
+
+
+    .back::before 
+    {
+      content:""; 
+      position:absolute; 
+      inset:0;
+      background:rgba(0,0,0,0.55);
+    }
+
+
+    .section 
+    {
+      padding:60px 0; 
+      width:90%; 
+      max-width:1100px; 
+      margin:auto;
+    }
+
+
+    .section h2 
+    { 
+      font-size:2.4rem; 
+      font-weight:700; 
+      text-align:center; 
+      margin-bottom:40px; 
+    }
+
+
+    .grid 
+    {
+      display:grid; 
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); 
+      gap:25px;
+    }
+
+    .card 
+    {
+      background:white;
+      border-radius:20px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.1);
+      overflow:hidden;
+      transition:transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover 
+    {
+      transform:translateY(-10px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+    }
+
+    .card img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      transition:0.3s ease;
+    }
+
+    .card:hover img {
+      transform:scale(1.05);
+    }
+
+    .card-content 
+    {
+      padding:22px;
+    }
+
+
+    .card h3 
+    { 
+      text-align: center;
+      font-size:1.2rem;
+      color:#79280a;
+      margin-bottom:10px;
+    }
+
+
+    .card p 
+    { 
+      text-align: center;
+      color:#555; 
+      line-height:1.6;
+      font-size:0.95rem; 
+    }
+
+
+    .pill 
+    {
+      background:#79280a; 
+      color:white; 
+      padding:10px 18px; 
+      border-radius:30px;
+      font-size:14px; 
+      font-weight:600; 
+      display:inline-block; 
+      margin:5px;
+    }
+
+    @media (max-width:600px) 
+    {
+      .back h2 { font-size:2rem; }
+      .section h2 { font-size:1.8rem; }
+    }
+   
+    .footer {
+  background: #222;
+  color: #ddd;
+  padding: 60px 0 20px;
+  margin-top: 40px;
+}
+
+.footer-back 
+{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.footer-about 
+{
+  width: 300px;
+}
+
+.footer-logo {
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-logo span 
+{
+ 
+  color: #79280a;
+}
+
+.footer-about p 
+{
+  line-height: 1.5;
+  color: #ccc;
+}
+
+
+.footer-links h3, .footer-social h3 
+{
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+  color: #f3f1f1;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a 
+{
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.footer-links ul li a:hover 
+{
+  color: white;
+  padding-left: 5px;
+}
+
+
+.footer-social .icons a 
+{
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  transition: 0.5s;
+  
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  
+}
+
+.footer-social .icons a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+  </style>
+
+  
+
+</head>
+
+<body>
+
+  <header>
+    <div class="home">
+      <h1 class="logo">Gen<span>AI</span></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="genai.html">What is GenAI?</a>
+        <a href="history.html">History</a>
+        <a href="evolution.html">Evolution</a>
+        <a href="application.html">Applications</a>
+       
+      </nav>
+    </div>
+  </header>
+
+  <section class="back">
+   </section>
+
+   <br/>
+   <br/>
+
+  <section class="section">
+    <h2>What Lies Ahead?</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="images/fa5.png" alt="">
+      <div class="card-content">
+        <h3>🤖 Human‑Level Interaction</h3>
+        <p>AI systems will communicate more naturally and understand deeper context to assist humans like real companions.</p>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="images/fa1.png" alt="">
+      <div class="card-content">
+        <h3>🧬 Advanced Personalization</h3>
+        <p>Future GenAI models will adapt to individual emotions, habits, and personality to deliver hyper‑personalized output.</p>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="images/fa4.png" alt="">
+      <div class="card-content">
+        <h3>🔮 AI‑Generated Worlds</h3>
+        <p>Entire movies, games, virtual universes, and realistic characters will be generated from simple prompts.</p>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="images/fa3.png" alt="">
+      <div class="card-content">
+        <h3>⚙ Automation in Every Industry</h3>
+        <p>Healthcare, education, engineering, and entertainment will all integrate AI‑powered automation deeply.</p>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="images/fa2.png" alt="">
+      <div class="card-content">
+        <h3>🌐 Multimodal Intelligence</h3>
+        <p>Future models will understand and generate text, audio, images, video, 3D, and real‑time simulations together.</p>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="images/fa6.png" alt="">
+      <div class="card-content">
+        <h3>🛡 Ethical & Safe AI</h3>
+        <p>Stronger rules, global standards, and safety layers will build trust and avoid misuse of powerful AI tools.</p>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Future Skills to Learn</h2>
+
+    <center>
+      <span class="pill">Prompt Engineering</span>
+      <span class="pill">AI Model Training</span>
+      <span class="pill">Data Ethics</span>
+      <span class="pill">Automation Design</span>
+      <span class="pill">Multimodal AI</span>
+      <span class="pill">AI + Creativity</span>
+    </center>
+
+  </section>
+
+  <footer class="footer">
+  <div class="footer-back">
+
+    
+    <div class="footer-about">
+      <h2 class="footer-logo">🤖Gen<span>AI</span> World</h2>
+      
+      <p>Learn the past, present & future of Artificial Intelligence(AI) & GenAI with simple explanations.</p>
+    </div>
+    
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="genai.html">What is GenAI?</a></li>
+        <li><a href="history.html"> History of AI</a></li>
+        <li><a href="evolution.html"> Evolution</a></li>
+        <li><a href="application.html"> Applications</a></li>
+        <li><a href="future.html"> Future of AI</a></li>
+         <li><a href="contact.html"> Contact </a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="icons">
+        <a href="https://www.facebook.com/share/19XAmh2ksP/"><span><img src="images/r9.png" alt="Facebook" /></span> Facebook</a>
+        <a href="https://www.instagram.com/artsy.neeru?igsh=MTQ0NzgweXBtemtpdg==&utm_source=ig_contact_invite"><span><img src="images/r8.png" alt="Instagram" /></span> Instagram</a>
+        <a href="https://www.behance.net/navinkumar09"><span><img src="images/r7.png" alt="Behance" /></span> Behance</a>
+        
+      </div>
+    </div>
+    
+
+  </div>
+  
+   </footer>
+
+</body>
+</html>
